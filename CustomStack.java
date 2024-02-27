@@ -10,7 +10,7 @@ public class CustomStack<T> {
     public Node<T> firstNode;
 
 
-      public void push(T value) {
+      public void push(T value) {//agrega un dato al final del stack
           if (lastNode == null) {
               lastNode = new Node<T>(value);
               firstNode = lastNode;
@@ -21,11 +21,11 @@ public class CustomStack<T> {
           }
       }
 
-      public boolean isEmpty() {
+      public boolean isEmpty() {//revisa si el stack está vacío
           return firstNode == null;
       }
 
-      public T pop() {
+      public T pop() {//elimína el último dato del stack
           if (firstNode != null) {
               T value = firstNode.getValue();
               firstNode = firstNode.getNext();
@@ -34,7 +34,7 @@ public class CustomStack<T> {
           return null;
       }
 
-      public int size() {
+      public int size() {//revisa el tamaño del stack
           int count = 0;
           Node<T> current = firstNode;
           while (current != null) {
@@ -44,7 +44,7 @@ public class CustomStack<T> {
           return count;
       }
 
-      public T[] toArray(T[] array) {
+      public T[] toArray(T[] array) {//vuelve el T en un array
           Node<T> current = firstNode;
           int index = 0;
           while (current != null && index < array.length) {

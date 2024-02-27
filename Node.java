@@ -6,6 +6,7 @@ Node genérico
 @throws Nodos Estructura del dato generico
 */
 public class Node<T>{
+    
     T value;
     Node<T> next;
     public Node (T val){                    //Datos genericos
